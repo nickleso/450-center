@@ -1,0 +1,290 @@
+/* colors */
+/* #FEFEFE #C12F2F #555555 #B3EFB2 #E8F1F2 #020302 #C8DAD1 */
+
+/* base styles */
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  color: #020302;
+  background-color: #fefefe;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+td {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: transparent;
+}
+
+textarea {
+  resize: none;
+}
+
+/* section */
+.section {
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 70px 0;
+  }
+}
+
+/* container */
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media screen and (min-width: 390px) {
+  .container {
+    width: 390px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1024px;
+    padding: 0 44px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    padding: 0 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    padding: 0 136px;
+  }
+}
+
+/* button */
+.main-button {
+  display: flex;
+  height: 49px;
+  padding: 6px 37px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 10px;
+  background-color: #b3efb2;
+  transition: color 250ms ease;
+
+  font-family: JetBrains Mono;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main-button:hover,
+.main-button:focus {
+  color: #fefefe;
+}
+
+/* hero */
+.hero-title {
+  text-align: center;
+}
+
+/* contacts */
+.contacts-section {
+  padding: 60px 0;
+}
+
+.contacts-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .contacts-contacts {
+    order: 1;
+  }
+
+  .contacts-feedback {
+    order: 0;
+  }
+}
+
+.contacts-title {
+  padding-bottom: 40px;
+  font-family: JetBrains Mono;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contacts-description {
+  margin-bottom: 16px;
+  color: #fefefe;
+}
+
+.contacts-value {
+  color: #b3efb2;
+  font-weight: 600;
+}
+
+.contactsNetworks-list {
+  display: flex;
+  gap: 32px;
+}
+
+.contactsNetworks-link {
+  display: block;
+  background-color: transparent;
+}
+
+.contactsNetworks-icon {
+  width: 40px;
+  height: 40px;
+  fill: #b3efb2;
+  transition: fill 250ms ease;
+}
+
+.contactsNetworks-link:hover .contactsNetworks-icon,
+.contactsNetworks-link:focus .contactsNetworks-icon {
+  fill: #fefefe;
+}
+
+/* footer */
+.footer {
+  padding: 16px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 24px 0;
+  }
+}
+
+.footer-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footerLogo-image {
+  width: 171px;
+  height: 39px;
+}
+
+@media screen and (min-width: 1024px) {
+  .footerLogo-image {
+    width: 217px;
+    height: 50px;
+  }
+}
+
+.footerNav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  gap: 10px;
+}
+
+@media screen and (min-width: 390px) {
+  .footerNav-list {
+    margin-left: 61px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footerNav-list {
+    flex-direction: row;
+    margin-left: auto;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footerNav-list {
+    gap: 24px;
+  }
+}
+
+.footerNav-link {
+  color: #020302;
+  transition: color 250ms ease;
+}
+
+.footerNav-link:hover,
+.footerNav-link:focus {
+  color: #b3efb2;
+}
+
+.footerButton-mob {
+  display: block;
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .footerButton-mob {
+    display: none;
+  }
+}
+
+.footerButton-desc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .footerButton-desc {
+    display: block;
+    margin-left: 24px;
+  }
+}
