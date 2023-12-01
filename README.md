@@ -2,8 +2,6 @@
 
 450 recovery center landing page (html, css, js)
 
-- font Concrete ??
-
 - colors:
   #FEFEFE
   #C12F2F
@@ -12,3 +10,8 @@
   #E8F1F2
   #020302
   #C8DAD1
+
+# todo
+
+- form validation ?
+- svg via links ?

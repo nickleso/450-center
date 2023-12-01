@@ -36,19 +36,29 @@
             <ul class="contacts-list">
               <li class="contacts-item">
                 <h3 class="contacts-description">Ми розташовані:</h3>
-                <p class="contacts-value">
+                <p class="contacts-valueAddress">
                   Місто Ужгород, Закарпатська область <br />
                   Вулиця Собранецька, 125
                 </p>
               </li>
               <li class="contacts-item">
                 <h3 class="contacts-description">Подзвонити нам:</h3>
-                <p class="contacts-value">+38 (095) 12-24-968</p>
-                <p class="contacts-value">+38 (068) 57-94-036</p>
+                <a
+                  class="contacts-value contacts-valueNumbers"
+                  href="tel:+380951224968"
+                  >+38 (095) 12-24-968</a
+                >
+                <a
+                  class="contacts-value contacts-valueNumbers"
+                  href="tel:+380685794036"
+                  >+38 (068) 57-94-036</a
+                >
               </li>
               <li class="contacts-item">
                 <h3 class="contacts-description">Написати нам:</h3>
-                <p class="contacts-value">info@gmail.com</p>
+                <a class="contacts-value" href="mailto:info@gmail.com"
+                  >info@gmail.com</a
+                >
               </li>
               <li class="contacts-item">
                 <h3 class="contacts-description">Слідкувати за нами:</h3>
@@ -184,7 +194,65 @@
           </div>
 
           <div class="contacts-feedback">
-            <h2 class="contacts-title">ЗВОРОТНІЙ ЗВ’ЯЗОК</h2>
+            <h2 class="contacts-title feedback-title">ЗВОРОТНІЙ ЗВ’ЯЗОК</h2>
+            <form id="feedback-form" class="feedback-form">
+              <div class="feedback-inputWrap">
+                <input
+                  class="feedback-input"
+                  id="feedbackName"
+                  name="feedbackName"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Ім’я"
+                  title="1-3 символи"
+                  required
+                />
+                <label class="feedback-label" for="feedbackName"
+                  >Ваше ім’я</label
+                >
+              </div>
+              <div class="feedback-inputWrap">
+                <input
+                  class="feedback-input"
+                  id="feedbackSurname"
+                  name="feedbackSurname"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Призвіще"
+                  required
+                />
+                <label class="feedback-label" for="feedbackSurname"
+                  >Ваше призвіще</label
+                >
+              </div>
+              <div class="feedback-inputWrap">
+                <input
+                  class="feedback-input"
+                  id="feedbackPhone"
+                  name="feedbackPhone"
+                  type="phone"
+                  autocomplete="off"
+                  placeholder="Телефон"
+                  required
+                />
+                <label class="feedback-label" for="feedbackPhone"
+                  >Номер телефону</label
+                >
+              </div>
+              <div class="feedback-inputWrap">
+                <input
+                  class="feedback-input"
+                  id="feedbackEmail"
+                  name="feedbackEmail"
+                  type="email"
+                  placeholder="user@gmail.com"
+                  autocomplete="off"
+                  required
+                />
+                <label class="feedback-label" for="feedbackEmail">Пошта</label>
+              </div>
+              <button class="main-button" type="submit">Надіслати</button>
+            </form>
           </div>
         </div>
       </div>
@@ -231,5 +299,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./index.js"></script>
   </body>
 </html>

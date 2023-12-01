@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Concrete';
+    src: url('Concrete-Regular.eot');
+    src: local('Concrete Regular'), local('Concrete-Regular'),
+        url('Concrete-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Concrete-Regular.woff2') format('woff2'),
+        url('Concrete-Regular.woff') format('woff'),
+        url('Concrete-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

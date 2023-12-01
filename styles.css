@@ -1,10 +1,14 @@
 /* colors */
 /* #FEFEFE #C12F2F #555555 #B3EFB2 #E8F1F2 #020302 #C8DAD1 */
 
+@import url("fonts/concrete/stylesheet.css");
+
 /* base styles */
 body {
   box-sizing: border-box;
   overflow-x: hidden;
+  /* overflow-y: scroll;
+  scroll-behavior: smooth; */
 
   color: #020302;
   background-color: #fefefe;
@@ -131,7 +135,36 @@ textarea {
 
 /* contacts */
 .contacts-section {
-  padding: 60px 0;
+  padding-top: 88px;
+  padding-bottom: 60px;
+
+  background-image: url(./images/contacts-bcg-mob.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 480px) {
+  .contacts-section {
+    background-position: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-section {
+    padding-top: 88px;
+    padding-bottom: 60px;
+
+    background-image: url(./images/contacts-bcg-desc.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts-section {
+    padding-top: 194px;
+    padding-bottom: 120px;
+  }
 }
 
 .contacts-wrap {
@@ -140,11 +173,11 @@ textarea {
   gap: 60px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .contacts-wrap {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: 80px;
   }
 
   .contacts-contacts {
@@ -156,11 +189,25 @@ textarea {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .contacts-wrap {
+    gap: 100px;
+  }
+}
+
 .contacts-title {
   padding-bottom: 40px;
   font-family: JetBrains Mono;
   font-size: 22px;
   font-weight: 700;
+  color: #fefefe;
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts-title {
+    font-size: 28px;
+    line-height: 1.4;
+  }
 }
 
 .contacts-list {
@@ -174,9 +221,30 @@ textarea {
   color: #fefefe;
 }
 
-.contacts-value {
+.contacts-valueAddress {
   color: #b3efb2;
   font-weight: 600;
+}
+
+.contacts-value {
+  display: block;
+  color: #b3efb2;
+  font-weight: 600;
+  transition: color 250ms ease;
+}
+
+.contacts-valueNumbers {
+  font-family: Concrete;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.32px;
+}
+
+.contacts-value:hover,
+.contacts-value:hover {
+  color: #fefefe;
 }
 
 .contactsNetworks-list {
@@ -199,6 +267,95 @@ textarea {
 .contactsNetworks-link:hover .contactsNetworks-icon,
 .contactsNetworks-link:focus .contactsNetworks-icon {
   fill: #fefefe;
+}
+
+/* feedback form */
+@media screen and (max-width: 1023.99px) {
+  .feedback-title {
+    text-align: center;
+  }
+}
+
+.feedback-form {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  width: 274px;
+}
+
+@media screen and (min-width: 1024px) {
+  .feedback-form {
+    margin: 0;
+    gap: 24px;
+    align-items: flex-start;
+    width: 274px;
+  }
+}
+
+.feedback-inputWrap {
+  position: relative;
+  width: 100%;
+}
+
+.feedback-label {
+  z-index: 10;
+  position: absolute;
+  top: -10px;
+  left: 24px;
+  padding: 0 8px;
+
+  background-color: #020302;
+  font-size: 14px;
+  color: #e8f1f2;
+  transition: transform 250ms ease;
+}
+
+.feedback-input {
+  width: 100%;
+  padding: 16px;
+
+  border-radius: 10px;
+  border: 2px solid #c8dad1;
+  outline: transparent;
+  background-color: transparent;
+  font-weight: 600;
+  color: #555;
+  transition: background-color 250ms ease;
+}
+
+.feedback-input:hover,
+.feedback-input:focus {
+  border-color: #c8dad1;
+  background-color: #e8f1f2;
+}
+
+.feedback-input:hover ~ .feedback-label,
+.feedback-input:focus ~ .feedback-label {
+  transform: translateY(-12px) translateX(-20px);
+  background-color: transparent;
+}
+
+.feedback-input::placeholder {
+  color: #555;
+}
+
+.feedback-input:valid {
+  border-color: #c8dad1;
+}
+
+.feedback-input:focus:invalid {
+  border-color: #c12f2f;
+}
+
+.feedback-input:valid {
+  border-color: #c8dad1;
+}
+
+.feedback-input:valid {
+  border-color: #c8dad1;
 }
 
 /* footer */
