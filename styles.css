@@ -133,6 +133,7 @@ textarea {
   align-items: center;
   gap: 8px;
 
+  color: #020302;
   border-radius: 10px;
   background-color: #b3efb2;
   transition: color 250ms ease;
@@ -148,11 +149,202 @@ textarea {
 }
 
 /* hero */
+.hero {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 128px;
+  background-image: url("./images/backgrounds/hero-bcg-mob.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 480px) {
+  .hero {
+    background-position: center 45%;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .hero {
+    background-position: center 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url("./images/backgrounds/hero-bcg-desc.png");
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 185px;
+  }
+}
+
+.hero-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hero-logoWrap {
+  width: 274px;
+  height: 190px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-logoWrap {
+    width: 671px;
+    height: 155px;
+  }
+}
+
+.hero-logoDesc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-logoMob {
+    display: none;
+  }
+
+  .hero-logoDesc {
+    display: block;
+  }
+}
+
 .hero-title {
-  text-align: center;
+  text-align: right;
+  margin-bottom: 80px;
+
+  font-family: JetBrains Mono;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.hero-titleBr {
+  display: none;
+}
+
+.hero-titleBrTab {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-titleBrTab {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .hero-titleBr {
+    display: block;
+  }
+
+  .hero-titleBrTab {
+    display: none;
+  }
+}
+
+.hero-button {
+  min-width: 275px;
+  height: 66px;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-button {
+    min-width: 410px;
+    height: 90px;
+  }
+}
+
+/* hero-header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #fefefe;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLogo-image {
+  width: 104px;
+  height: 27px;
+}
+
+@media screen and (min-width: 768px) {
+  .headerLogo-image {
+    width: 91px;
+    height: 21px;
+  }
+}
+
+/* mob header nav */
+@media screen and (min-width: 768px) {
+  .headerMob-navButton {
+    display: none;
+  }
+}
+
+/* desc header nav */
+.headerDesc-nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .headerDesc-nav {
+    display: block;
+  }
+}
+
+.headerDesc-navList {
+  display: flex;
+  gap: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  .headerDesc-navList {
+    gap: 40px;
+  }
+}
+
+.headerDesc-navLink {
+  color: inherit;
+  transition: color 250ms ease;
+}
+
+.headerDesc-navLink:hover,
+.headerDesc-navLink:focus {
+  color: #b3efb2;
 }
 
 /* ambassadors */
+.ambassadors-container {
+  position: relative;
+}
+
 .ambassadors-list {
   display: flex;
   flex-direction: column;
@@ -191,14 +383,39 @@ textarea {
   }
 }
 
+.team-item {
+  padding: 16px;
+}
+
+.teamContact-linkWrap {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .teamContact-linkWrap {
+    padding-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 .ambassadors-imageWrap {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 16px;
+  height: 270px;
+}
+
+@media screen and (max-width: 767.99px) {
+  .team-imageWrap {
+    height: 341px;
+  }
 }
 
 .ambassadors-image {
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
 }
 
@@ -212,6 +429,10 @@ textarea {
   border-top: 2px solid #c8dad1;
 }
 
+.teamData-wrap {
+  align-items: flex-start;
+}
+
 .ambassadorsData-name {
   font-family: JetBrains Mono;
   font-size: 18px;
@@ -220,6 +441,10 @@ textarea {
 
 .ambassadorsData-description {
   text-align: center;
+}
+
+.ambassadorsData-subDescription {
+  font-size: 14px;
 }
 
 .ambassadorsData-contactsList {
@@ -251,10 +476,104 @@ textarea {
   fill: #020302;
 }
 
+.ambassadorsData-contactsItem:hover,
+.ambassadorsData-contactsItem:focus {
+  background-color: #b3efb2;
+}
+
 .ambassadorsData-contactsItem:hover .ambassadorsData-contactsIcon,
 .ambassadorsData-contactsItem:focus .ambassadorsData-contactsIcon {
-  background-color: #b3efb2;
   fill: #fefefe;
+}
+
+.ambassadorsSlider-tabsList {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.ambassadorsSlider-tabsButtons {
+  width: 50px;
+  height: 4px;
+  background-color: #c8dad1;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+@media screen and (min-width: 768px) {
+  .ambassadorsSlider-tabsButtons {
+    width: 60px;
+    height: 4px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ambassadorsSlider-tabsButtons {
+    width: 100px;
+    height: 6px;
+  }
+}
+
+.ambassadorsSlider-tabsButtons.active {
+  background-color: #b3efb2;
+}
+
+.ambassadorsSlider-tabsButtons:hover,
+.ambassadorsSlider-tabsButtons:focus {
+  background-color: #b3efb2;
+}
+
+.ambassadorsSlider-navButtonsList {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .ambassadorsSlider-navButtonsList {
+    padding-top: 0;
+    padding-left: 44px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .ambassadorsSlider-navButtonsList {
+    padding-left: 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .ambassadorsSlider-navButtonsList {
+    padding-left: 136px;
+  }
+}
+
+.ambassadorsSlider-navButton {
+  width: 40px;
+  height: 40px;
+  background-color: #e8f1f2;
+  border-radius: 7px;
+  transition: background-color 250ms ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .ambassadorsSlider-navButton {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.ambassadorsSlider-navButton:hover,
+.ambassadorsSlider-navButton:focus {
+  background-color: #b3efb2;
+}
+
+.ambassadorsSlider-navArrow-up {
+  transform: rotate(-180deg);
 }
 
 /* support */

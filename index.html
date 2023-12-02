@@ -22,16 +22,277 @@
     />
   </head>
   <body>
-    <!-- герой -->
-    <section id="hero" class="section hero-section">
+    <!-- герой-хедер -->
+    <section id="hero" class="hero">
+      <header class="header">
+        <div class="container header-container">
+          <a href="#hero" class="headerLogo-link">
+            <img
+              class="headerLogo-image"
+              src="./images/logos/logo-450.svg"
+              alt="логотип"
+            />
+          </a>
+          <nav class="headerDesc-nav">
+            <ul class="headerDesc-navList">
+              <li class="headerDesc-navItem">
+                <a href="#about" class="headerDesc-navLink">Про нас</a>
+              </li>
+              <li class="headerDesc-navItem">
+                <a href="#news" class="headerDesc-navLink">Новини</a>
+              </li>
+              <li class="headerDesc-navItem">
+                <a href="#works" class="headerDesc-navLink">Напрямки роботи</a>
+              </li>
+              <li class="headerDesc-navItem">
+                <a href="#colab" class="headerDesc-navLink">Співпраця</a>
+              </li>
+              <li class="headerDesc-navItem">
+                <a href="#contacts" class="headerDesc-navLink">Контакти</a>
+              </li>
+              <li class="headerDesc-navItem">
+                <a href="#" class="headerDesc-navLink">Пацієнтам</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="headerMob-navButton" type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+            >
+              <path
+                d="M7 12H33M7 20H33M7 28H33"
+                stroke="#020302"
+                stroke-width="3"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
       <div class="container">
-        <h1 class="hero-title">ЦЕНТР, СТВОРЕНИЙ ЛЮДЬМИ ДЛЯ ЛЮДЕЙ</h1>
+        <div class="hero-wrap">
+          <div class="hero-logoWrap">
+            <img
+              class="hero-logoMob"
+              src="./images/logos/logo-hero-mob.svg"
+              alt="лого 450 recovery center"
+            />
+            <img
+              class="hero-logoDesc"
+              src="./images/logos/logo-hero-desc.svg"
+              alt="лого 450 recovery center"
+            />
+          </div>
+          <h1 class="hero-title">
+            ЦЕНТР, СТВОРЕНИЙ <br class="hero-titleBrTab" />
+            ЛЮДЬМИ <br class="hero-titleBr" />
+            ДЛЯ ЛЮДЕЙ
+          </h1>
+          <button type="button" class="main-button hero-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="30"
+              viewBox="0 0 32 30"
+              fill="none"
+            >
+              <path
+                d="M17.2084 1.84943C18.8129 0.671031 20.6741 0.081833 22.7759 0.081833C23.9311 0.081833 25.1986 0.392799 26.5785 1.04746C27.9583 1.68576 29.0493 2.43863 29.8515 3.30606C31.5041 5.40098 32.1941 7.83961 31.9534 10.6219C31.6967 13.4043 30.7982 15.581 29.2419 17.1195L17.064 29.5417C16.7592 29.8527 16.3741 30 15.9249 30C15.4756 30 15.1066 29.8527 14.8017 29.5417C14.6536 29.3926 14.5372 29.2139 14.4599 29.0168C14.3826 28.8196 14.346 28.6083 14.3525 28.3961C14.3525 27.9378 14.4969 27.545 14.8017 27.234L22.1662 19.7218C22.5673 19.3617 22.5673 18.9853 22.1662 18.5761C21.7651 18.1669 21.3961 18.1669 21.0431 18.5761L13.6786 26.0884C13.5301 26.241 13.3522 26.3605 13.1561 26.4393C12.9601 26.5182 12.7501 26.5548 12.5395 26.5466C12.0902 26.5466 11.7212 26.3993 11.4163 26.0884C11.2682 25.9393 11.1518 25.7605 11.0745 25.5634C10.9971 25.3663 10.9606 25.1549 10.9671 24.9427C10.9671 24.4845 11.1115 24.0917 11.4163 23.7807L18.7808 16.2684C19.214 15.8592 19.214 15.4501 18.7808 15.0409C18.4118 14.6318 18.0588 14.6318 17.6577 15.0409L10.2932 22.635C10.143 22.7852 9.96484 22.9032 9.76917 22.9819C9.57349 23.0606 9.36433 23.0985 9.15405 23.0933C8.70481 23.0933 8.31974 22.946 7.9828 22.635C7.66191 22.3241 7.50146 21.9476 7.50146 21.4894C7.50146 21.0311 7.67795 20.6219 8.03093 20.2619L15.4114 12.7332C15.8126 12.3241 15.8126 11.9476 15.4114 11.5876C15.0103 11.2275 14.6253 11.2275 14.2723 11.5876L6.82759 19.1326C6.47461 19.4599 6.10558 19.6399 5.70447 19.6399C5.25522 19.6399 4.87015 19.4763 4.58135 19.1326C4.2765 18.8052 4.11606 18.4124 4.11606 17.9542C4.11606 17.4959 4.2765 17.1195 4.58135 16.8085C9.49099 11.7676 12.5234 8.7234 13.6786 7.59411L19.3905 13.3552C20.0162 13.9607 20.7382 14.2717 21.6207 14.2717C22.7438 14.2717 23.6263 13.8134 24.2841 12.8969C24.7333 12.2259 24.8938 11.4894 24.7654 10.671C24.6371 9.8527 24.3001 9.1653 23.7546 8.59247L17.2084 1.84943ZM20.5136 12.2095L13.6786 5.22095L2.31907 16.8085C0.971322 15.4173 0.201182 13.2897 0.0246917 10.3928C-0.151799 7.51227 0.618341 5.00818 2.31907 2.91326C4.22837 0.981997 6.5067 0 9.15405 0C11.8175 0 14.0797 0.981997 15.9249 2.91326L22.7759 9.9018C23.0807 10.2128 23.2251 10.5892 23.2251 11.0475C23.2251 11.5057 23.0807 11.8985 22.7759 12.2095C22.471 12.5041 22.102 12.6678 21.6207 12.6678C21.1875 12.6678 20.8185 12.5041 20.5136 12.2095Z"
+                fill="black"
+              />
+            </svg>
+            Зробити внесок
+          </button>
+        </div>
       </div>
     </section>
 
-    <!-- нас підтримали -->
+    <!-- наша команда -->
     <section class="section ambassadors-section">
-      <div class="container">
+      <div class="container ambassadors-container">
+        <h2 class="section-title">НАША КОМАНДА</h2>
+        <ul class="ambassadors-list">
+          <li class="ambassadors-item team-item">
+            <div class="ambassadors-imageWrap team-imageWrap">
+              <img
+                class="ambassadors-image"
+                src="./images/team/team-hajdyk.jpg"
+                alt="ambassadors mykuta"
+              />
+            </div>
+            <div class="ambassadorsData-wrap teamData-wrap">
+              <h3 class="ambassadorsData-name">Тарас Гайдук</h3>
+              <p class="teamData-description">
+                Очільник проектного офісу з реалізації концепту Закарпатського
+                обласного реабілітаційного центру
+              </p>
+              <ul class="ambassadorsData-contactsList">
+                <li class="ambassadorsData-contactsItem">
+                  <svg
+                    class="ambassadorsData-contactsIcon"
+                    width="12"
+                    height="20"
+                    class="ambassadorsData-contactsIcon"
+                  >
+                    <use xlink:href="./images/logos/logo-u24.svg"></use>
+                  </svg>
+                </li>
+                <li class="ambassadorsData-contactsItem"></li>
+              </ul>
+              <p class="ambassadorsData-subDescription">
+                Lorem ipsum dolor sit amet consectetur. Lectus massa non diam
+                diam mattis nunc donec elementum. Quis donec sed quis sagittis
+                mi. Et purus enim dictum faucibus.
+              </p>
+            </div>
+          </li>
+          <li class="ambassadors-item team-item">
+            <div class="ambassadors-imageWrap team-imageWrap">
+              <img
+                class="ambassadors-image"
+                src="./images/team/team-hajdyk.jpg"
+                alt="ambassadors mykuta"
+              />
+            </div>
+            <div class="ambassadorsData-wrap teamData-wrap">
+              <h3 class="ambassadorsData-name">Тарас Гайдук</h3>
+              <p class="teamData-description">
+                Очільник проектного офісу з реалізації концепту Закарпатського
+                обласного реабілітаційного центру
+              </p>
+              <ul class="ambassadorsData-contactsList">
+                <li class="ambassadorsData-contactsItem">
+                  <svg
+                    class="ambassadorsData-contactsIcon"
+                    width="12"
+                    height="20"
+                    class="ambassadorsData-contactsIcon"
+                  >
+                    <use xlink:href="./images/logos/logo-u24.svg"></use>
+                  </svg>
+                </li>
+                <li class="ambassadorsData-contactsItem"></li>
+              </ul>
+              <p class="ambassadorsData-subDescription">
+                Lorem ipsum dolor sit amet consectetur. Lectus massa non diam
+                diam mattis nunc donec elementum. Quis donec sed quis sagittis
+                mi. Et purus enim dictum faucibus.
+              </p>
+            </div>
+          </li>
+          <li class="ambassadors-item team-item">
+            <div class="ambassadors-imageWrap team-imageWrap">
+              <img
+                class="ambassadors-image"
+                src="./images/team/team-mashukevich.jpg"
+                alt="ambassadors mykuta"
+              />
+            </div>
+            <div class="ambassadorsData-wrap teamData-wrap">
+              <h3 class="ambassadorsData-name">Ганна Машукович</h3>
+              <p class="teamData-description">Медичний директор</p>
+              <ul class="ambassadorsData-contactsList">
+                <li class="ambassadorsData-contactsItem">
+                  <svg
+                    class="ambassadorsData-contactsIcon"
+                    width="12"
+                    height="20"
+                    class="ambassadorsData-contactsIcon"
+                  >
+                    <use xlink:href="./images/logos/logo-u24.svg"></use>
+                  </svg>
+                </li>
+                <li class="ambassadorsData-contactsItem"></li>
+              </ul>
+              <p class="ambassadorsData-subDescription">
+                Lorem ipsum dolor sit amet consectetur. Lectus massa non diam
+                diam mattis nunc donec elementum. Quis donec sed quis sagittis
+                mi. Et purus enim dictum faucibus.
+              </p>
+            </div>
+          </li>
+          <li class="ambassadors-item team-item">
+            <div class="ambassadors-imageWrap team-imageWrap">
+              <img
+                class="ambassadors-image"
+                src="./images/team/team-mashukevich.jpg"
+                alt="ambassadors ajax"
+              />
+            </div>
+            <div class="ambassadorsData-wrap teamData-wrap">
+              <h3 class="ambassadorsData-name">Ганна Машукович</h3>
+              <p class="teamData-description">Медичний директор</p>
+              <ul class="ambassadorsData-contactsList">
+                <li class="ambassadorsData-contactsItem">
+                  <svg
+                    class="ambassadorsData-contactsIcon"
+                    width="12"
+                    height="20"
+                    class="ambassadorsData-contactsIcon"
+                  >
+                    <use xlink:href="./images/logos/logo-u24.svg"></use>
+                  </svg>
+                </li>
+                <li class="ambassadorsData-contactsItem"></li>
+              </ul>
+              <p class="ambassadorsData-subDescription">
+                Lorem ipsum dolor sit amet consectetur. Lectus massa non diam
+                diam mattis nunc donec elementum. Quis donec sed quis sagittis
+                mi. Et purus enim dictum faucibus.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="ambassadorsSlider-tabsList">
+          <li class="ambassadorsSlider-tabsItems">
+            <div class="ambassadorsSlider-tabsButtons active"></div>
+          </li>
+          <li class="ambassadorsSlider-tabsItems">
+            <div class="ambassadorsSlider-tabsButtons"></div>
+          </li>
+          <li class="ambassadorsSlider-tabsItems">
+            <div class="ambassadorsSlider-tabsButtons"></div>
+          </li>
+          <li class="ambassadorsSlider-tabsItems">
+            <div class="ambassadorsSlider-tabsButtons"></div>
+          </li>
+        </ul>
+
+        <ul class="ambassadorsSlider-navButtonsList">
+          <li class="ambassadorsSlider-navButtonsItem">
+            <button class="ambassadorsSlider-navButton" type="button">
+              <img src="./images/icons/slider-arrow.svg" alt="slider arrow" />
+            </button>
+          </li>
+          <li class="ambassadorsSlider-navButtonsItem">
+            <button class="ambassadorsSlider-navButton" type="button">
+              <img
+                class="ambassadorsSlider-navArrow-up"
+                src="./images/icons/slider-arrow.svg"
+                alt="slider arrow"
+              />
+            </button>
+          </li>
+        </ul>
+
+        <div class="teamContact-linkWrap">
+          <a href="#contacts" class="main-button teamContact-link"
+            >Зв’язатись з нами</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- наші амбасадори -->
+    <section id="colab" class="section ambassadors-section">
+      <div class="container ambassadors-container">
         <h2 class="section-title">НАШІ АМБАСАДОРИ</h2>
         <ul class="ambassadors-list">
           <li class="ambassadors-item">
@@ -122,14 +383,14 @@
             <div class="ambassadors-imageWrap">
               <img
                 class="ambassadors-image"
-                src="./images/ambassadors/ambassador-mykuta.jpg"
-                alt="ambassadors mykuta"
+                src="./images/ambassadors/ambassador-ajax.jpg"
+                alt="ambassadors ajax"
               />
             </div>
             <div class="ambassadorsData-wrap">
-              <h3 class="ambassadorsData-name">Віктор Микита</h3>
+              <h3 class="ambassadorsData-name">Ajax Systems</h3>
               <p class="ambassadorsData-description">
-                Голова Закарпатської облдержадміністрації
+                Міжнародна технологічна компанія
               </p>
               <ul class="ambassadorsData-contactsList">
                 <li class="ambassadorsData-contactsItem">
@@ -145,6 +406,38 @@
                 <li class="ambassadorsData-contactsItem"></li>
               </ul>
             </div>
+          </li>
+        </ul>
+
+        <ul class="ambassadorsSlider-tabsList">
+          <li class="ambassadorsSlider-tabsItems">
+            <div class="ambassadorsSlider-tabsButtons active"></div>
+          </li>
+          <li class="ambassadorsSlider-tabsItems">
+            <div class="ambassadorsSlider-tabsButtons"></div>
+          </li>
+          <li class="ambassadorsSlider-tabsItems">
+            <div class="ambassadorsSlider-tabsButtons"></div>
+          </li>
+          <li class="ambassadorsSlider-tabsItems">
+            <div class="ambassadorsSlider-tabsButtons"></div>
+          </li>
+        </ul>
+
+        <ul class="ambassadorsSlider-navButtonsList">
+          <li class="ambassadorsSlider-navButtonsItem">
+            <button class="ambassadorsSlider-navButton" type="button">
+              <img src="./images/icons/slider-arrow.svg" alt="slider arrow" />
+            </button>
+          </li>
+          <li class="ambassadorsSlider-navButtonsItem">
+            <button class="ambassadorsSlider-navButton" type="button">
+              <img
+                class="ambassadorsSlider-navArrow-up"
+                src="./images/icons/slider-arrow.svg"
+                alt="slider arrow"
+              />
+            </button>
           </li>
         </ul>
       </div>
@@ -489,7 +782,7 @@
             <a href="#hero" class="footerLogo-link">
               <img
                 class="footerLogo-image"
-                src="./images/logo.svg"
+                src="./images/logos/logo-450.svg"
                 alt="логотип"
               />
             </a>
