@@ -539,7 +539,7 @@ textarea {
   gap: 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .news-list {
     padding-bottom: 24px;
     flex-direction: row;
@@ -559,17 +559,17 @@ textarea {
     #fff;
 }
 
-@media screen and (max-width: 767.99px) {
-  .newsItem-imageWrap {
-    height: 239px;
-  }
-}
-
 .newsItem-imageWrap {
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 8px;
   height: 250px;
+}
+
+@media screen and (max-width: 767.99px) {
+  .newsItem-imageWrap {
+    height: 239px;
+  }
 }
 
 .newsItem-image {
@@ -725,7 +725,6 @@ textarea {
 }
 
 /* stories */
-
 @media screen and (min-width: 1024px) {
   .stories-title {
     text-align: left;
@@ -740,10 +739,186 @@ textarea {
   position: relative;
 }
 
+.stories-listWrap {
+  display: flex;
+  gap: 24px;
+}
+
+.stories-list {
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .stories-list {
+    padding-bottom: 0;
+    justify-content: space-between;
+  }
+}
+
+.stories-item {
+  padding: 16px;
+
+  border-top: 2px solid #c8dad1;
+  border-bottom: 2px solid #c8dad1;
+  background: linear-gradient(
+      0deg,
+      rgba(232, 241, 242, 0.5) 0%,
+      rgba(232, 241, 242, 0.5) 100%
+    ),
+    #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .stories-item {
+    background: #fefefe;
+    display: flex;
+    gap: 16px;
+    transition: background 250ms ease;
+  }
+
+  .stories-item.active {
+    background: #c8dad1;
+  }
+
+  .stories-item:hover,
+  .stories-item:focus {
+    background: #c8dad1;
+    cursor: pointer;
+  }
+}
+
+.storiesItem-imageWrap {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  height: 97px;
+}
+
+@media screen and (max-width: 1023.99px) {
+  .storiesItem-imageWrap {
+    height: 206px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .storiesItem-imageWrap {
+    width: 110px;
+    margin-bottom: 0;
+  }
+}
+
+.storiesItem-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+.storiesItem-descriptionWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .storiesItem-descriptionWrap {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+.storiesItem-description {
+  font-family: JetBrains Mono;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1024px) {
+  .storiesItem-description {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .storiesItem-descriptionCut {
+    height: 60px;
+    overflow: hidden;
+  }
+}
+
+.storiesItem-subDescriptionWrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1024px) {
+  .storiesItem-subDescriptionWrap {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023.99px) {
+  .stories-bigItem {
+    display: none;
+  }
+}
+
+.stories-bigItem {
+  padding: 16px;
+
+  border-top: 2px solid #c8dad1;
+  border-bottom: 2px solid #c8dad1;
+  background: linear-gradient(
+      0deg,
+      rgba(232, 241, 242, 0.5) 0%,
+      rgba(232, 241, 242, 0.5) 100%
+    ),
+    #fff;
+}
+
+.storiesBigItem-imageWrap {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  height: 275px;
+}
+
+.storiesBigItem-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+.storiesBigItem-descriptionWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.storiesBigItem-description {
+  font-family: JetBrains Mono;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.storiesBigItem-subDescriptionWrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .storiesSlider-tabsList {
   display: flex;
   justify-content: center;
   gap: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .storiesSlider-tabsList {
+    display: none;
+  }
 }
 
 .storiesSlider-tabsButtons {
@@ -756,7 +931,6 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .storiesSlider-tabsButtons {
-    /* display: none; */
     width: 60px;
     height: 4px;
   }
@@ -829,6 +1003,16 @@ textarea {
 
 .storiesSlider-navArrow-up {
   transform: rotate(-180deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .storiesSlider-navArrow-up {
+    transform: rotate(90deg);
+  }
+
+  .storiesSlider-navArrow-down {
+    transform: rotate(-90deg);
+  }
 }
 
 /* works */
@@ -1803,7 +1987,7 @@ textarea {
 
 @media screen and (min-width: 1024px) {
   .footerButton-desc {
-    display: block;
+    display: flex;
     margin-left: 24px;
   }
 }
