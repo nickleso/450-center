@@ -56,3 +56,34 @@ function closeMobileMenu() {
   burgerIcon.classList.remove("active");
   burgerMenu.classList.remove("active");
 }
+
+// read more
+const newsReadMoreButtons = document.querySelectorAll(".newsItem-readMore");
+
+newsReadMoreButtons.forEach((button) => {
+  button.addEventListener("click", onReadMoreClick);
+
+  function onReadMoreClick() {
+    const closestWrap = button.closest("li");
+
+    let readMoreDiv = null;
+
+    for (const child of closestWrap.children) {
+      if (child.className === "newsItem-descriptionWrap") {
+        readMoreDiv = child;
+      }
+    }
+
+    if (readMoreDiv.style.height !== "auto") {
+      readMoreDiv.style.height = "auto";
+      button.textContent = "Згорнути";
+      return;
+    }
+
+    if (readMoreDiv.style.height === "auto") {
+      readMoreDiv.style.height = "126px";
+      button.textContent = "Читати більше...";
+      return;
+    }
+  }
+});

@@ -400,12 +400,47 @@ textarea {
 
 /* presentation */
 .presentation-section {
+  position: relative;
   padding-top: 72px;
 }
 
 @media screen and (min-width: 1024px) {
   .presentation-section {
     padding-top: 113px;
+  }
+}
+
+.presentation-noise-1 {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 298px;
+  background-image: url("./images/backgrounds/about-noiseMob-1.png");
+}
+
+@media screen and (min-width: 768px) {
+  .presentation-noise-2 {
+    z-index: -10;
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    width: 130px;
+    height: 298px;
+    background-image: url("./images/backgrounds/about-noiseDesk-1.png");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .presentation-noise-3 {
+    z-index: -10;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 130px;
+    height: 256px;
+    background-image: url("./images/backgrounds/about-noiseDesk-2.png");
   }
 }
 
@@ -462,6 +497,340 @@ textarea {
   }
 }
 
+/* news */
+.news-section {
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .news-noise-1 {
+    z-index: -10;
+    position: absolute;
+    top: 510px;
+    left: 0;
+    width: 914px;
+    height: 536px;
+    background-image: url("./images/backgrounds/news-noiseDesc-1.png");
+  }
+}
+
+.news-container {
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .news-title {
+    text-align: right;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .news-title {
+    text-align: right;
+    padding-right: 100px;
+  }
+}
+
+.news-list {
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .news-list {
+    padding-bottom: 24px;
+    flex-direction: row;
+  }
+}
+
+.news-item {
+  padding: 16px;
+
+  border-radius: 3px;
+  border: 2px solid #c8dad1;
+  background: linear-gradient(
+      0deg,
+      rgba(232, 241, 242, 0.5) 0%,
+      rgba(232, 241, 242, 0.5) 100%
+    ),
+    #fff;
+}
+
+@media screen and (max-width: 767.99px) {
+  .newsItem-imageWrap {
+    height: 239px;
+  }
+}
+
+.newsItem-imageWrap {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  height: 250px;
+}
+
+.newsItem-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+.newsItem-date {
+  margin-bottom: 16px;
+  color: #555;
+  text-align: right;
+  font-family: Concrete;
+  font-size: 14px;
+}
+
+.newsItem-descriptionWrap {
+  height: 126px;
+  overflow: hidden;
+}
+
+.newsItem-descriptionWrap.active {
+  height: auto;
+}
+
+.newsItem-description {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #c8dad1;
+
+  font-family: JetBrains Mono;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1024px) {
+  .newsItem-description {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .newsItem-description {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+}
+
+.newsItem-readMore {
+  margin-top: 16px;
+  color: #b3efb2;
+  font-family: JetBrains Mono;
+  font-size: 18px;
+  font-weight: 1.4;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .newsItem-readMore {
+    color: #555;
+    font-weight: 1.3;
+  }
+}
+
+.newsSlider-tabsList {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.newsSlider-tabsButtons {
+  width: 50px;
+  height: 4px;
+  background-color: #c8dad1;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+@media screen and (min-width: 768px) {
+  .newsSlider-tabsButtons {
+    width: 60px;
+    height: 4px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .newsSlider-tabsButtons {
+    width: 100px;
+    height: 6px;
+  }
+}
+
+.newsSlider-tabsButtons.active {
+  background-color: #b3efb2;
+}
+
+.newsSlider-tabsButtons:hover,
+.newsSlider-tabsButtons:focus {
+  background-color: #b3efb2;
+}
+
+.newsSlider-navButtonsList {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .newsSlider-navButtonsList {
+    padding-top: 0;
+    padding-left: 44px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .newsSlider-navButtonsList {
+    padding-left: 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .newsSlider-navButtonsList {
+    padding-left: 136px;
+  }
+}
+
+.newsSlider-navButton {
+  width: 40px;
+  height: 40px;
+  background-color: #e8f1f2;
+  border-radius: 7px;
+  transition: background-color 250ms ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .newsSlider-navButton {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.newsSlider-navButton:hover,
+.newsSlider-navButton:focus {
+  background-color: #b3efb2;
+}
+
+.newsSlider-navArrow-up {
+  transform: rotate(-180deg);
+}
+
+/* stories */
+
+@media screen and (min-width: 1024px) {
+  .stories-title {
+    text-align: left;
+  }
+}
+
+.stories-section {
+  position: relative;
+}
+
+.stories-container {
+  position: relative;
+}
+
+.storiesSlider-tabsList {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.storiesSlider-tabsButtons {
+  width: 50px;
+  height: 4px;
+  background-color: #c8dad1;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+@media screen and (min-width: 768px) {
+  .storiesSlider-tabsButtons {
+    /* display: none; */
+    width: 60px;
+    height: 4px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .storiesSlider-tabsButtons {
+    width: 100px;
+    height: 6px;
+  }
+}
+
+.storiesSlider-tabsButtons.active {
+  background-color: #b3efb2;
+}
+
+.storiesSlider-tabsButtons:hover,
+.storiesSlider-tabsButtons:focus {
+  background-color: #b3efb2;
+}
+
+.storiesSlider-navButtonsList {
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .storiesSlider-navButtonsList {
+    padding-top: 0;
+    padding-right: 44px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .storiesSlider-navButtonsList {
+    padding-right: 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .storiesSlider-navButtonsList {
+    padding-right: 136px;
+  }
+}
+
+.storiesSlider-navButton {
+  width: 40px;
+  height: 40px;
+  background-color: #e8f1f2;
+  border-radius: 7px;
+  transition: background-color 250ms ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .storiesSlider-navButton {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.storiesSlider-navButton:hover,
+.storiesSlider-navButton:focus {
+  background-color: #b3efb2;
+}
+
+.storiesSlider-navArrow-up {
+  transform: rotate(-180deg);
+}
+
 /* works */
 .works-section {
   position: relative;
@@ -470,17 +839,7 @@ textarea {
 
   background-image: url("./images/backgrounds/works-bcgBlack-mob.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.works-section {
-  padding-top: 80px;
-  padding-bottom: 120px;
-
-  background-image: url("./images/backgrounds/works-bcgBlack-mob.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center center;
 }
 
@@ -702,15 +1061,9 @@ textarea {
   padding-top: 100px;
 }
 
-@media screen and (max-width: 767.99px) {
-  .ambassadors-noise-1 {
-    z-index: -10;
-    position: absolute;
-    top: -60px;
-    left: 0;
-    width: 130px;
-    height: 256px;
-    background-image: url("./images/backgrounds/ambasssadors-noiseMob-1.png");
+@media screen and (min-width: 768px) {
+  .team-section {
+    padding-top: 140px;
   }
 }
 
@@ -736,6 +1089,18 @@ textarea {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .team-noise-3 {
+    z-index: -10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 130px;
+    height: 298px;
+    background-image: url("./images/backgrounds/team-noiseDesk-1.png");
+  }
+}
+
 .ambassadors-section {
   position: relative;
 }
@@ -749,12 +1114,6 @@ textarea {
     width: 130px;
     height: 256px;
     background-image: url("./images/backgrounds/ambasssadors-noiseMob-1.png");
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .team-section {
-    padding-top: 140px;
   }
 }
 
@@ -953,7 +1312,7 @@ textarea {
     padding-top: 0;
     padding-left: 44px;
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 0;
   }
 }
