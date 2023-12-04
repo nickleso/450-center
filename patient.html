@@ -121,6 +121,291 @@
       </header>
       <div class="container">
         <h1 class="section-title">РЕЄСТРАЦІЯ ПАЦІЄНТА</h1>
+
+        <div class="patient-registration">
+          <div class="patientRequirments-wrap">
+            <div class="patientRequirments">
+              <h3 class="patientRequirments-title">Вимоги до пацієнтів</h3>
+              <ul class="patientRequirments-list">
+                <li class="patientRequirments-item">
+                  <img
+                    class="patientRequirments-icon"
+                    src="./images/icons/patient-list-mark.svg"
+                    alt="list mark"
+                  />
+                  <p class="patientRequirments-text">
+                    Ми приймаємо війсьових та цивільних людей, які досягли 18
+                    років.
+                  </p>
+                </li>
+                <li class="patientRequirments-item">
+                  <img
+                    class="patientRequirments-icon"
+                    src="./images/icons/patient-list-mark.svg"
+                    alt="list mark"
+                  />
+                  <p class="patientRequirments-text">
+                    Діти можуть бути прийнять на лікування з 2х років і повині
+                    перебувати у супроводі батьків.
+                  </p>
+                </li>
+                <li class="patientRequirments-item">
+                  <img
+                    class="patientRequirments-icon"
+                    src="./images/icons/patient-list-mark.svg"
+                    alt="list mark"
+                  />
+                  <p class="patientRequirments-text">
+                    Необхідна згода пацієнта на медичне втручання та
+                    психологічну допомогу з боку команди 4.5.0 recovery center.
+                  </p>
+                </li>
+                <li class="patientRequirments-item">
+                  <img
+                    class="patientRequirments-icon"
+                    src="./images/icons/patient-list-mark.svg"
+                    alt="list mark"
+                  />
+                  <p class="patientRequirments-text">
+                    Наш центр залишає за собою право відмовити в лікуванні за
+                    медичними показниками.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="patientSubRequirments">
+              <p class="patientRequirments-text">
+                Lorem ipsum dolor sit amet consectetur. Arcu ultricies pharetra
+                velit est consequat. Eget consequat fusce integer lacus egestas.
+                Vitae egestas accumsan velit ultrices tristique vitae. Sit nec
+                pretium sed ipsum iaculis. Tristique purus leo gravida nulla
+                adipiscing in ac ut sed. Euismod aliquam nunc volutpat elementum
+                ipsum malesuada ullamcorper sed scelerisque. At arcu ipsum neque
+                egestas neque tristique nunc lobortis tellus.
+              </p>
+              <p class="patientRequirments-text">
+                Lorem ipsum dolor sit amet consectetur. Arcu ultricies pharetra
+                velit est consequat. Eget consequat fusce integer lacus egestas.
+                Vitae egestas accumsan velit ultrices tristique vitae. Sit nec
+                pretium sed ipsum iaculis. Tristique purus leo gravida nulla
+                adipiscing in ac ut sed. Euismod aliquam nunc volutpat elementum
+                ipsum malesuada ullamcorper sed scelerisque. At arcu ipsum neque
+                egestas neque tristique nunc lobortis tellus.
+              </p>
+            </div>
+          </div>
+
+          <form id="patient-form" class="patient-form">
+            <div class="patient-checkboxWrap">
+              <input
+                class="patient-checkboxInput"
+                id="patientTraumaCheck"
+                name="patientTraumaCheck"
+                type="checkbox"
+                required
+              />
+              <label class="patient-checkboxLabel" for="patientTraumaCheck"
+                >Я підтверджую, що отримав(ла) травму внаслідок військових дій
+                на території України</label
+              >
+            </div>
+
+            <div class="patient-fieldInputsWrap">
+              <div class="patient-inputWrap">
+                <label class="patient-label" for="patientPib">ПІБ</label>
+                <input
+                  class="patient-input"
+                  id="patientPib"
+                  name="patientPib"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Призвіще Ім’я По-батькові"
+                  required
+                />
+              </div>
+
+              <div class="patient-doubledInputWrap">
+                <div class="patient-inputWrap">
+                  <label class="patient-label" for="patientEmail"
+                    >Електронна пошта</label
+                  >
+                  <input
+                    class="patient-input"
+                    id="patientEmail"
+                    name="patientEmail"
+                    type="email"
+                    placeholder="user@gmail.com"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="patient-inputWrap">
+                  <label class="patient-label" for="patientPhone"
+                    >Контактний номер телефону</label
+                  >
+                  <input
+                    class="patient-input"
+                    id="patientPhone"
+                    name="patientPhone"
+                    type="tel"
+                    autocomplete="off"
+                    placeholder="+38 (000) 00-00-000"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="patient-doubledInputWrap">
+                <div class="patient-inputWrap">
+                  <label class="patient-label" for="patientBirthDate"
+                    >Дата народження</label
+                  >
+                  <input
+                    class="patient-input"
+                    id="patientBirthDate"
+                    name="patientBirthDate"
+                    type="date"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="patient-inputWrap">
+                  <label class="patient-label" for="patientTraumaDate"
+                    >Дата отримання травми</label
+                  >
+                  <input
+                    class="patient-input"
+                    id="patientTraumaDate"
+                    name="patientTraumaDate"
+                    type="date"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="patient-inputWrap">
+                <label class="patient-label" for="patientTraumaDescr">
+                  Короткий опис травми та стадії лікування</label
+                >
+                <input
+                  class="patient-input"
+                  id="patientTraumaDescr"
+                  name="patientTraumaDescr"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Опис"
+                  required
+                />
+              </div>
+              <div class="patient-inputWrap">
+                <label class="patient-label" for="patientCurrentState"
+                  >Поточний стан та міісцезнаходження</label
+                >
+                <input
+                  class="patient-input"
+                  id="patientCurrentState"
+                  name="patientCurrentState"
+                  type="text"
+                  autocomplete="off"
+                  placeholder="Опис"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="patient-fileInputsWrap">
+              <div class="patient-inputFileWrap">
+                <label class="patient-fileLabel" for="patientFileMedDocs"
+                  ><svg
+                    class="patient-fileIcon"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.0991 1.5C15.1503 1.49975 16.1787 1.80631 17.0581 2.38206C17.9375 2.95782 18.6298 3.77773 19.0499 4.74122C19.4701 5.70472 19.5998 6.76989 19.4233 7.80606C19.2468 8.84223 18.7716 9.80435 18.0561 10.5744L17.8851 10.749L10.0315 18.6022L9.98378 18.6472L9.93339 18.6877C9.29362 19.2392 8.46904 19.5286 7.62492 19.4978C6.78079 19.467 5.97948 19.1184 5.38157 18.5217C4.78366 17.9251 4.43333 17.1246 4.40079 16.2806C4.36824 15.4365 4.65589 14.6114 5.20608 13.9705L5.34017 13.8229L5.35367 13.813L11.9141 7.24033C12.0827 7.07136 12.3116 6.97629 12.5503 6.97603C12.789 6.97578 13.0181 7.07036 13.1871 7.23898C13.3561 7.40759 13.4511 7.63643 13.4514 7.87514C13.4516 8.11385 13.357 8.34289 13.1884 8.51186L6.62796 15.0846L6.61716 15.0918C6.35237 15.3745 6.20316 15.7462 6.19897 16.1336C6.19478 16.5209 6.3359 16.8958 6.59451 17.1842C6.85311 17.4726 7.21042 17.6536 7.59594 17.6916C7.98147 17.7295 8.36722 17.6216 8.67709 17.3892L8.78688 17.2992L8.78778 17.3001L16.6189 9.47113L16.762 9.32265C17.3921 8.63016 17.7275 7.71945 17.6972 6.78374C17.6669 5.84803 17.2732 4.96095 16.5996 4.3107C15.926 3.66046 15.0256 3.29822 14.0893 3.30084C13.1531 3.30346 12.2547 3.67072 11.5848 4.32472L11.4453 4.4687L11.4291 4.4795L3.03636 12.8754C2.95274 12.9589 2.85349 13.0252 2.74427 13.0704C2.63505 13.1156 2.51799 13.1388 2.39979 13.1388C2.28159 13.1387 2.16455 13.1154 2.05536 13.0701C1.94617 13.0249 1.84696 12.9585 1.76341 12.8749C1.67986 12.7913 1.61359 12.6921 1.56839 12.5828C1.5232 12.4736 1.49996 12.3566 1.5 12.2384C1.50008 11.9997 1.595 11.7708 1.76386 11.602L10.1413 3.22147L10.1827 3.18278C10.6867 2.65046 11.2942 2.22664 11.9678 1.93729C12.6413 1.64794 13.366 1.49914 14.0991 1.5Z"
+                    />
+                  </svg>
+
+                  Додати медичну виписку</label
+                >
+                <input
+                  class="patient-fileInput"
+                  id="patientFileMedDocs"
+                  name="patientFileMedDocs"
+                  type="file"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+
+              <div class="patient-inputFileWrap">
+                <label class="patient-fileLabel" for="patientFileTraumaPhoto"
+                  ><svg
+                    class="patient-fileIcon"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.0991 1.5C15.1503 1.49975 16.1787 1.80631 17.0581 2.38206C17.9375 2.95782 18.6298 3.77773 19.0499 4.74122C19.4701 5.70472 19.5998 6.76989 19.4233 7.80606C19.2468 8.84223 18.7716 9.80435 18.0561 10.5744L17.8851 10.749L10.0315 18.6022L9.98378 18.6472L9.93339 18.6877C9.29362 19.2392 8.46904 19.5286 7.62492 19.4978C6.78079 19.467 5.97948 19.1184 5.38157 18.5217C4.78366 17.9251 4.43333 17.1246 4.40079 16.2806C4.36824 15.4365 4.65589 14.6114 5.20608 13.9705L5.34017 13.8229L5.35367 13.813L11.9141 7.24033C12.0827 7.07136 12.3116 6.97629 12.5503 6.97603C12.789 6.97578 13.0181 7.07036 13.1871 7.23898C13.3561 7.40759 13.4511 7.63643 13.4514 7.87514C13.4516 8.11385 13.357 8.34289 13.1884 8.51186L6.62796 15.0846L6.61716 15.0918C6.35237 15.3745 6.20316 15.7462 6.19897 16.1336C6.19478 16.5209 6.3359 16.8958 6.59451 17.1842C6.85311 17.4726 7.21042 17.6536 7.59594 17.6916C7.98147 17.7295 8.36722 17.6216 8.67709 17.3892L8.78688 17.2992L8.78778 17.3001L16.6189 9.47113L16.762 9.32265C17.3921 8.63016 17.7275 7.71945 17.6972 6.78374C17.6669 5.84803 17.2732 4.96095 16.5996 4.3107C15.926 3.66046 15.0256 3.29822 14.0893 3.30084C13.1531 3.30346 12.2547 3.67072 11.5848 4.32472L11.4453 4.4687L11.4291 4.4795L3.03636 12.8754C2.95274 12.9589 2.85349 13.0252 2.74427 13.0704C2.63505 13.1156 2.51799 13.1388 2.39979 13.1388C2.28159 13.1387 2.16455 13.1154 2.05536 13.0701C1.94617 13.0249 1.84696 12.9585 1.76341 12.8749C1.67986 12.7913 1.61359 12.6921 1.56839 12.5828C1.5232 12.4736 1.49996 12.3566 1.5 12.2384C1.50008 11.9997 1.595 11.7708 1.76386 11.602L10.1413 3.22147L10.1827 3.18278C10.6867 2.65046 11.2942 2.22664 11.9678 1.93729C12.6413 1.64794 13.366 1.49914 14.0991 1.5Z"
+                    />
+                  </svg>
+                  Додати фото травми</label
+                >
+                <input
+                  class="patient-fileInput"
+                  id="patientFileTraumaPhoto"
+                  name="patientFileTraumaPhoto"
+                  type="file"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="patient-buttonWrap">
+              <button class="main-button" type="submit">
+                Надіслати анкету
+              </button>
+            </div>
+
+            <div class="patient-checkboxWrapSecondary">
+              <input
+                class="patient-checkboxInput"
+                id="patientPersonalDataCheck"
+                name="patientPersonalDataCheck"
+                type="checkbox"
+                required
+              />
+              <label
+                class="patient-checkboxLabelSecondary"
+                for="patientPersonalDataCheck"
+                >Направляючи та заповнюючи анкету на сайті 450recovery.com я
+                (особисто/мій повноважний представник) відповідно до Закону
+                України “Про захист персональних даних” надаю добровільну та
+                інформовану згоду на обробку моїх персональних даних, зазначених
+                в анкеті, а також на поширення (в тому числі надання,
+                реалізацію, передачу) моїх персональних даних третім особам з
+                метою організації надання благодійної допомоги.
+              </label>
+            </div>
+
+            <p class="patient-additionalInfo">
+              Якщо ви бажаєте надати більше документів, будь ласка, надішліть їх
+              на e-mail
+              <a class="patient-additionalLink" href="mailto:user@gmail.com"
+                >user@gmail.com</a
+              >
+            </p>
+          </form>
+        </div>
       </div>
     </section>
 

@@ -2,31 +2,36 @@ console.log("hi from js");
 
 // feedback form submit
 const feedbackForm = document.getElementById("feedback-form");
-feedbackForm.addEventListener("submit", onFeedbackFormSubmit);
 
-function onFeedbackFormSubmit(event) {
-  event.preventDefault();
-  const form = event.target;
+if (feedbackForm) {
+  feedbackForm.addEventListener("submit", onFeedbackFormSubmit);
 
-  const name = form.elements.feedbackName.value.trim();
-  const surname = form.elements.feedbackSurname.value.trim();
-  const phone = form.elements.feedbackPhone.value.trim();
-  const email = form.elements.feedbackEmail.value.trim();
+  function onFeedbackFormSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
 
-  if (name === "" || surname === "" || phone === "" || email === "") {
-    console.log("empty fields");
-    return;
+    const name = form.elements.feedbackName.value.trim();
+    const surname = form.elements.feedbackSurname.value.trim();
+    const phone = form.elements.feedbackPhone.value.trim();
+    const email = form.elements.feedbackEmail.value.trim();
+
+    if (name === "" || surname === "" || phone === "" || email === "") {
+      console.log("empty fields");
+      return;
+    }
+
+    // form values
+    const feedback = {
+      name,
+      surname,
+      phone,
+      email,
+    };
+
+    console.log("feedback:", feedback);
+
+    form.reset();
   }
-
-  // form values
-  console.log({
-    name,
-    surname,
-    phone,
-    email,
-  });
-
-  form.reset();
 }
 
 // burger menu
@@ -60,30 +65,86 @@ function closeMobileMenu() {
 // read more
 const newsReadMoreButtons = document.querySelectorAll(".newsItem-readMore");
 
-newsReadMoreButtons.forEach((button) => {
-  button.addEventListener("click", onReadMoreClick);
+if (newsReadMoreButtons) {
+  newsReadMoreButtons.forEach((button) => {
+    button.addEventListener("click", onReadMoreClick);
 
-  function onReadMoreClick() {
-    const closestWrap = button.closest("li");
+    function onReadMoreClick() {
+      const closestWrap = button.closest("li");
 
-    let readMoreDiv = null;
+      let readMoreDiv = null;
 
-    for (const child of closestWrap.children) {
-      if (child.className === "newsItem-descriptionWrap") {
-        readMoreDiv = child;
+      for (const child of closestWrap.children) {
+        if (child.className === "newsItem-descriptionWrap") {
+          readMoreDiv = child;
+        }
+      }
+
+      if (readMoreDiv.style.height !== "auto") {
+        readMoreDiv.style.height = "auto";
+        button.textContent = "Згорнути";
+        return;
+      }
+
+      if (readMoreDiv.style.height === "auto") {
+        readMoreDiv.style.height = "126px";
+        button.textContent = "Читати більше...";
+        return;
       }
     }
+  });
+}
 
-    if (readMoreDiv.style.height !== "auto") {
-      readMoreDiv.style.height = "auto";
-      button.textContent = "Згорнути";
-      return;
-    }
+// patient registration form
+const patientRegistrationForm = document.getElementById("patient-form");
 
-    if (readMoreDiv.style.height === "auto") {
-      readMoreDiv.style.height = "126px";
-      button.textContent = "Читати більше...";
-      return;
-    }
-  }
-});
+if (patientRegistrationForm) {
+  patientRegistrationForm.addEventListener(
+    "submit",
+    onPatientRegistrationFormSubmit
+  );
+}
+
+function onPatientRegistrationFormSubmit(event) {
+  event.preventDefault();
+
+  const traumaCheck = document.getElementById("patientTraumaCheck").checked;
+  const pib = document.getElementById("patientPib").value.trim();
+  const email = document.getElementById("patientEmail").value.trim();
+  const phone = document.getElementById("patientPhone").value.trim();
+  const birthDate = document.getElementById("patientBirthDate").value.trim();
+  const traumaDate = document.getElementById("patientTraumaDate").value.trim();
+  const traumaDescr = document
+    .getElementById("patientTraumaDescr")
+    .value.trim();
+  const currentState = document
+    .getElementById("patientCurrentState")
+    .value.trim();
+
+  const fileMedDocs = document.getElementById("patientFileMedDocs").files[0];
+  const fileNameMedDocs = fileMedDocs ? fileMedDocs.name : "";
+
+  const fileTraumaPhoto = document.getElementById("patientFileTraumaPhoto")
+    .files[0];
+  const fileNameTraumaPhoto = fileTraumaPhoto ? fileTraumaPhoto.name : "";
+
+  const personalDataCheck = document.getElementById(
+    "patientPersonalDataCheck"
+  ).checked;
+
+  const patient = {
+    traumaCheck,
+    pib,
+    email,
+    phone,
+    birthDate,
+    traumaDate,
+    traumaDescr,
+    currentState,
+    fileNameMedDocs,
+    fileNameTraumaPhoto,
+    personalDataCheck,
+  };
+
+  console.log("patient:", patient);
+}

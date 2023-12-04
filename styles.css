@@ -1872,7 +1872,7 @@ textarea {
   background-color: transparent;
   font-weight: 600;
   color: #555;
-  transition: background-color 250ms ease;
+  transition: background-color 250ms ease, border-color 250ms ease;
 }
 
 .feedback-input:hover,
@@ -1999,6 +1999,345 @@ textarea {
 .patient-section {
   padding-top: 116px;
   padding-bottom: 60px;
+
+  background: url("./images/backgrounds/patient-bcg-mob.png"), lightgray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .patient-section {
+    background: url("./images/backgrounds/patient-bcg-desc.png"), lightgray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+  }
+}
+
+.patient-registration {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .patient-registration {
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .patient-registration {
+    gap: 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .patient-registration {
+    gap: 120px;
+  }
+}
+
+.patientRequirments-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .patientRequirments-wrap {
+    padding-bottom: 0;
+    gap: 32px;
+  }
+}
+
+.patientRequirments {
+  padding: 16px;
+  border-radius: 10px;
+  background: #c8dad1;
+}
+
+@media screen and (min-width: 1024px) {
+  .patientRequirments {
+    padding: 24px;
+  }
+}
+
+.patientRequirments-title {
+  text-align: center;
+  padding-bottom: 16px;
+
+  font-family: JetBrains Mono;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 1024px) {
+  .patientRequirments-title {
+    padding-bottom: 24px;
+  }
+}
+
+.patientRequirments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.patientRequirments-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.patientRequirments-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.patientSubRequirments {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* patient form */
+.patient-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-checkboxWrap {
+  margin-bottom: 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.patient-checkboxLabel {
+  flex: 1;
+}
+
+.patient-checkboxLabelSecondary {
+  font-size: 14px;
+  flex: 1;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fefefe;
+  margin: 0;
+
+  font: inherit;
+  color: #020302;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #020302;
+  border-radius: 5px;
+  transform: translateY(-0.075px);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 18px;
+  height: 14px;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1px 1px #062455;
+  background-color: #020302;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15px) solid #c8dad1;
+  outline-offset: max(2px, 0.15px);
+}
+
+.patient-fieldInputsWrap {
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .patient-fieldInputsWrap {
+    padding-bottom: 40px;
+    gap: 32px;
+  }
+}
+
+.patient-inputWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.patient-input {
+  padding: 16px;
+  border-radius: 10px;
+  border: 2px solid #555;
+  background: #fefefe;
+
+  outline: transparent;
+  font-weight: 400;
+  color: #555;
+  transition: background-color 250ms ease, border-color 250ms ease;
+}
+
+.patient-input:hover,
+.patient-input:focus {
+  border-color: #c8dad1;
+  background-color: #e8f1f2;
+}
+
+.patient-input::placeholder {
+  color: #555;
+}
+
+.patient-input:valid {
+  border-color: #c8dad1;
+}
+
+.patient-input:focus:invalid {
+  border-color: #c12f2f;
+}
+
+.patient-input:valid {
+  border-color: #c8dad1;
+}
+
+.patient-input:valid {
+  border-color: #c8dad1;
+}
+
+.patient-fileInputsWrap {
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media screen and (min-width: 1024px) {
+  .patient-fileInputsWrap {
+    padding-bottom: 40px;
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.patient-doubledInputWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media screen and (min-width: 1024px) {
+  .patient-doubledInputWrap {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.patient-inputFileWrap {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  flex: 1;
+}
+
+.patient-fileLabel {
+  display: flex;
+  height: 49px;
+  padding: 6px 37px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  fill: #555;
+  text-align: center;
+  color: #020302;
+  border-radius: 10px;
+  border: 2px solid #b3efb2;
+  background-color: #fefefe;
+  transition: color 250ms ease, background-color 250ms ease;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.patient-inputFileWrap:hover .patient-fileLabel,
+.patient-inputFileWrap:focus .patient-fileLabel {
+  color: #fefefe;
+  background-color: #b3efb2;
+  fill: #fefefe;
+}
+
+.patient-fileIcon {
+  fill: #555;
+  width: 20px;
+  height: 20px;
+  transition: fill 250ms ease;
+}
+
+.patient-inputFileWrap:hover .patient-fileIcon,
+.patient-inputFileWrap:focus .patient-fileIcon {
+  fill: #fefefe;
+}
+
+.patient-fileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.patient-buttonWrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.patient-checkboxWrapSecondary {
+  display: flex;
+  gap: 16px;
+  padding-top: 32px;
+  padding-bottom: 18px;
+}
+
+@media screen and (min-width: 1024px) {
+  .patient-checkboxWrapSecondary {
+    padding-top: 24px;
+  }
+}
+
+.patient-additionalInfo {
+  padding-left: 56px;
+  font-size: 14px;
+}
+
+.patient-additionalLink {
+  color: inherit;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 /* donation page */
