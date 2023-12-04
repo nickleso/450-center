@@ -62,39 +62,6 @@ function closeMobileMenu() {
   burgerMenu.classList.remove("active");
 }
 
-// read more
-const newsReadMoreButtons = document.querySelectorAll(".newsItem-readMore");
-
-if (newsReadMoreButtons) {
-  newsReadMoreButtons.forEach((button) => {
-    button.addEventListener("click", onReadMoreClick);
-
-    function onReadMoreClick() {
-      const closestWrap = button.closest("li");
-
-      let readMoreDiv = null;
-
-      for (const child of closestWrap.children) {
-        if (child.className === "newsItem-descriptionWrap") {
-          readMoreDiv = child;
-        }
-      }
-
-      if (readMoreDiv.style.height !== "auto") {
-        readMoreDiv.style.height = "auto";
-        button.textContent = "Згорнути";
-        return;
-      }
-
-      if (readMoreDiv.style.height === "auto") {
-        readMoreDiv.style.height = "126px";
-        button.textContent = "Читати більше...";
-        return;
-      }
-    }
-  });
-}
-
 // patient registration form
 const patientRegistrationForm = document.getElementById("patient-form");
 
@@ -147,4 +114,281 @@ function onPatientRegistrationFormSubmit(event) {
   };
 
   console.log("patient:", patient);
+}
+
+// sliders
+slidersConfig();
+
+function slidersConfig() {
+  $(".slider-news-js").on("init", function (event, slick) {
+    var dotCount = slick.$dots.find("li").length;
+    var maxDotsToShow = 4; // Задаємо максимальну кількість точок для відображення
+
+    if (dotCount > maxDotsToShow) {
+      const activeIndex = slick.$dots.find(".slick-active").index();
+
+      const start = Math.max(0, activeIndex - Math.floor(maxDotsToShow / 2));
+      const end = Math.min(dotCount, start + maxDotsToShow);
+
+      // Перевіряємо чи початок і кінець не виходять за межі
+      if (end - start < maxDotsToShow) {
+        start = Math.max(0, end - maxDotsToShow);
+      }
+
+      // Сховати всі точки
+      slick.$dots.find("li").hide();
+
+      // Показати відфільтровану кількість точок
+      for (let i = start; i < end; i++) {
+        slick.$dots.find("li").eq(i).show();
+      }
+    }
+  });
+
+  $(".slider-stories-js").on("init", function (event, slick) {
+    var dotCount = slick.$dots.find("li").length;
+    var maxDotsToShow = 4; // Задаємо максимальну кількість точок для відображення
+
+    if (dotCount > maxDotsToShow) {
+      const activeIndex = slick.$dots.find(".slick-active").index();
+
+      const start = Math.max(0, activeIndex - Math.floor(maxDotsToShow / 2));
+      const end = Math.min(dotCount, start + maxDotsToShow);
+
+      // Перевіряємо чи початок і кінець не виходять за межі
+      if (end - start < maxDotsToShow) {
+        start = Math.max(0, end - maxDotsToShow);
+      }
+
+      // Сховати всі точки
+      slick.$dots.find("li").hide();
+
+      // Показати відфільтровану кількість точок
+      for (let i = start; i < end; i++) {
+        slick.$dots.find("li").eq(i).show();
+      }
+    }
+  });
+
+  $(".slider-team-js").on("init", function (event, slick) {
+    var dotCount = slick.$dots.find("li").length;
+    var maxDotsToShow = 4; // Задаємо максимальну кількість точок для відображення
+
+    if (dotCount > maxDotsToShow) {
+      const activeIndex = slick.$dots.find(".slick-active").index();
+
+      const start = Math.max(0, activeIndex - Math.floor(maxDotsToShow / 2));
+      const end = Math.min(dotCount, start + maxDotsToShow);
+
+      // Перевіряємо чи початок і кінець не виходять за межі
+      if (end - start < maxDotsToShow) {
+        start = Math.max(0, end - maxDotsToShow);
+      }
+
+      // Сховати всі точки
+      slick.$dots.find("li").hide();
+
+      // Показати відфільтровану кількість точок
+      for (let i = start; i < end; i++) {
+        slick.$dots.find("li").eq(i).show();
+      }
+    }
+  });
+
+  $(".slider-ambassadors-js").on("init", function (event, slick) {
+    var dotCount = slick.$dots.find("li").length;
+    var maxDotsToShow = 4; // Задаємо максимальну кількість точок для відображення
+
+    if (dotCount > maxDotsToShow) {
+      const activeIndex = slick.$dots.find(".slick-active").index();
+
+      const start = Math.max(0, activeIndex - Math.floor(maxDotsToShow / 2));
+      const end = Math.min(dotCount, start + maxDotsToShow);
+
+      // Перевіряємо чи початок і кінець не виходять за межі
+      if (end - start < maxDotsToShow) {
+        start = Math.max(0, end - maxDotsToShow);
+      }
+
+      // Сховати всі точки
+      slick.$dots.find("li").hide();
+
+      // Показати відфільтровану кількість точок
+      for (let i = start; i < end; i++) {
+        slick.$dots.find("li").eq(i).show();
+      }
+    }
+  });
+
+  $(".slider-news-js").slick({
+    dots: true,
+    arrows: true,
+    infinite: false,
+    speed: 300,
+    appendArrows: $(".newsSlider-buttonsContainer"),
+    appendDots: $(".newsSlider-dotsContainer"),
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+    ],
+  });
+
+  $(".slider-stories-js").slick({
+    dots: true,
+    arrows: true,
+    infinite: false,
+    speed: 300,
+    appendArrows: $(".storiesSlider-buttonsContainer"),
+    appendDots: $(".storiesSlider-dotsContainer"),
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+    ],
+  });
+
+  $(".slider-team-js").slick({
+    dots: true,
+    arrows: true,
+    infinite: false,
+    speed: 300,
+    appendArrows: $(".teamSlider-buttonsContainer"),
+    appendDots: $(".teamSlider-dotsContainer"),
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+    ],
+  });
+
+  $(".slider-ambassadors-js").slick({
+    dots: true,
+    arrows: true,
+    infinite: false,
+    speed: 300,
+    appendArrows: $(".ambassadorsSlider-buttonsContainer"),
+    appendDots: $(".ambassadorsSlider-dotsContainer"),
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: true,
+          dots: true,
+        },
+      },
+    ],
+  });
 }

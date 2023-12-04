@@ -21,6 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -189,8 +190,9 @@
       <div class="news-noise-1"></div>
       <div class="container news-container">
         <h2 class="section-title news-title">ОСТАННІ НОВИНИ НАШОГО ЦЕНТРУ</h2>
-        <ul class="news-list">
-          <li class="news-item">
+
+        <div class="news-list slider-news-js">
+          <div class="news-item">
             <div class="newsItem-imageWrap">
               <img
                 class="newsItem-image"
@@ -212,11 +214,11 @@
                 Condimentum morbi varius tristique lacus arcu nibh duis.
               </p>
             </div>
-            <button type="button" class="newsItem-readMore">
+            <a href="./news.html" class="newsItem-readMore">
               Читати більше...
-            </button>
-          </li>
-          <li class="news-item">
+            </a>
+          </div>
+          <div class="news-item">
             <div class="newsItem-imageWrap">
               <img
                 class="newsItem-image"
@@ -238,11 +240,11 @@
                 Condimentum morbi varius tristique lacus arcu nibh duis.
               </p>
             </div>
-            <button type="button" class="newsItem-readMore">
+            <a href="./news.html" class="newsItem-readMore">
               Читати більше...
-            </button>
-          </li>
-          <li class="news-item">
+            </a>
+          </div>
+          <div class="news-item">
             <div class="newsItem-imageWrap">
               <img
                 class="newsItem-image"
@@ -264,43 +266,66 @@
                 Condimentum morbi varius tristique lacus arcu nibh duis.
               </p>
             </div>
-            <button type="button" class="newsItem-readMore">
+            <a href="./news.html" class="newsItem-readMore">
               Читати більше...
-            </button>
-          </li>
-        </ul>
-
-        <ul class="newsSlider-tabsList">
-          <li class="newsSlider-tabsItems">
-            <div class="newsSlider-tabsButtons active"></div>
-          </li>
-          <li class="newsSlider-tabsItems">
-            <div class="newsSlider-tabsButtons"></div>
-          </li>
-          <li class="newsSlider-tabsItems">
-            <div class="newsSlider-tabsButtons"></div>
-          </li>
-          <li class="newsSlider-tabsItems">
-            <div class="newsSlider-tabsButtons"></div>
-          </li>
-        </ul>
-
-        <ul class="newsSlider-navButtonsList">
-          <li class="newsSlider-navButtonsItem">
-            <button class="newsSlider-navButton" type="button">
-              <img src="./images/icons/slider-arrow.svg" alt="slider arrow" />
-            </button>
-          </li>
-          <li class="newsSlider-navButtonsItem">
-            <button class="newsSlider-navButton" type="button">
+            </a>
+          </div>
+          <div class="news-item">
+            <div class="newsItem-imageWrap">
               <img
-                class="newsSlider-navArrow-up"
-                src="./images/icons/slider-arrow.svg"
-                alt="slider arrow"
+                class="newsItem-image"
+                src="./images/news/news-450office.jpg"
+                alt="news office"
               />
-            </button>
-          </li>
-        </ul>
+            </div>
+            <p class="newsItem-date">21/11/2023</p>
+            <h3 class="newsItem-description">Lorem ipsum dolor sit amet</h3>
+            <div class="newsItem-descriptionWrap">
+              <p class="newsItem-subDescription">
+                Lorem ipsum dolor sit amet consectetur. Enim interdum faucibus
+                etiam aliquam nunc proin at lectus. At sagittis tortor mi
+                vivamus donec etiam curabitur odio. Vitae proin risus magna at.
+                Condimentum morbi varius tristique lacus arcu nibh duis. Lorem
+                ipsum dolor sit amet consectetur. Enim interdum faucibus etiam
+                aliquam nunc proin at lectus. At sagittis tortor mi vivamus
+                donec etiam curabitur odio. Vitae proin risus magna at.
+                Condimentum morbi varius tristique lacus arcu nibh duis.
+              </p>
+            </div>
+            <a href="./news.html" class="newsItem-readMore">
+              Читати більше...
+            </a>
+          </div>
+          <div class="news-item">
+            <div class="newsItem-imageWrap">
+              <img
+                class="newsItem-image"
+                src="./images/news/news-450building.jpg"
+                alt="news building"
+              />
+            </div>
+            <p class="newsItem-date">21/11/2023</p>
+            <h3 class="newsItem-description">Lorem ipsum dolor sit amet</h3>
+            <div class="newsItem-descriptionWrap">
+              <p class="newsItem-subDescription">
+                Lorem ipsum dolor sit amet consectetur. Enim interdum faucibus
+                etiam aliquam nunc proin at lectus. At sagittis tortor mi
+                vivamus donec etiam curabitur odio. Vitae proin risus magna at.
+                Condimentum morbi varius tristique lacus arcu nibh duis. Lorem
+                ipsum dolor sit amet consectetur. Enim interdum faucibus etiam
+                aliquam nunc proin at lectus. At sagittis tortor mi vivamus
+                donec etiam curabitur odio. Vitae proin risus magna at.
+                Condimentum morbi varius tristique lacus arcu nibh duis.
+              </p>
+            </div>
+            <a href="./news.html" class="newsItem-readMore">
+              Читати більше...
+            </a>
+          </div>
+        </div>
+
+        <div class="newsSlider-dotsContainer"></div>
+        <div class="newsSlider-buttonsContainer"></div>
       </div>
     </section>
 
@@ -475,6 +500,9 @@
           </ul>
         </div>
 
+        <!-- <div class="newsSlider-dotsContainer"></div>
+      <div class="newsSlider-buttonsContainer"></div> -->
+
         <ul class="storiesSlider-tabsList">
           <li class="storiesSlider-tabsItems">
             <div class="storiesSlider-tabsButtons active"></div>
@@ -617,8 +645,8 @@
       <div class="team-noise-3"></div>
       <div class="container ambassadors-container">
         <h2 class="section-title">НАША КОМАНДА</h2>
-        <ul class="ambassadors-list">
-          <li class="ambassadors-item team-item">
+        <div class="ambassadors-list slider-team-js">
+          <div class="ambassadors-item team-item">
             <div class="ambassadors-imageWrap team-imageWrap">
               <img
                 class="ambassadors-image"
@@ -670,8 +698,8 @@
                 mi. Et purus enim dictum faucibus.
               </p>
             </div>
-          </li>
-          <li class="ambassadors-item team-item">
+          </div>
+          <div class="ambassadors-item team-item">
             <div class="ambassadors-imageWrap team-imageWrap">
               <img
                 class="ambassadors-image"
@@ -723,8 +751,8 @@
                 mi. Et purus enim dictum faucibus.
               </p>
             </div>
-          </li>
-          <li class="ambassadors-item team-item">
+          </div>
+          <div class="ambassadors-item team-item">
             <div class="ambassadors-imageWrap team-imageWrap">
               <img
                 class="ambassadors-image"
@@ -773,8 +801,8 @@
                 mi. Et purus enim dictum faucibus.
               </p>
             </div>
-          </li>
-          <li class="ambassadors-item team-item">
+          </div>
+          <div class="ambassadors-item team-item">
             <div class="ambassadors-imageWrap team-imageWrap">
               <img
                 class="ambassadors-image"
@@ -823,40 +851,11 @@
                 mi. Et purus enim dictum faucibus.
               </p>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
 
-        <ul class="ambassadorsSlider-tabsList">
-          <li class="ambassadorsSlider-tabsItems">
-            <div class="ambassadorsSlider-tabsButtons active"></div>
-          </li>
-          <li class="ambassadorsSlider-tabsItems">
-            <div class="ambassadorsSlider-tabsButtons"></div>
-          </li>
-          <li class="ambassadorsSlider-tabsItems">
-            <div class="ambassadorsSlider-tabsButtons"></div>
-          </li>
-          <li class="ambassadorsSlider-tabsItems">
-            <div class="ambassadorsSlider-tabsButtons"></div>
-          </li>
-        </ul>
-
-        <ul class="ambassadorsSlider-navButtonsList">
-          <li class="ambassadorsSlider-navButtonsItem">
-            <button class="ambassadorsSlider-navButton" type="button">
-              <img src="./images/icons/slider-arrow.svg" alt="slider arrow" />
-            </button>
-          </li>
-          <li class="ambassadorsSlider-navButtonsItem">
-            <button class="ambassadorsSlider-navButton" type="button">
-              <img
-                class="ambassadorsSlider-navArrow-up"
-                src="./images/icons/slider-arrow.svg"
-                alt="slider arrow"
-              />
-            </button>
-          </li>
-        </ul>
+        <div class="teamSlider-dotsContainer"></div>
+        <div class="teamSlider-buttonsContainer"></div>
 
         <div class="teamContact-linkWrap">
           <a href="#contacts" class="main-button teamContact-link"
@@ -871,8 +870,8 @@
       <div class="ambassadors-noise-1"></div>
       <div class="container ambassadors-container">
         <h2 class="section-title">НАШІ АМБАСАДОРИ</h2>
-        <ul class="ambassadors-list">
-          <li class="ambassadors-item">
+        <div class="ambassadors-list slider-ambassadors-js">
+          <div class="ambassadors-item">
             <div class="ambassadors-imageWrap">
               <img
                 class="ambassadors-image"
@@ -918,8 +917,8 @@
                 </li>
               </ul>
             </div>
-          </li>
-          <li class="ambassadors-item">
+          </div>
+          <div class="ambassadors-item">
             <div class="ambassadors-imageWrap">
               <img
                 class="ambassadors-image"
@@ -965,8 +964,8 @@
                 </li>
               </ul>
             </div>
-          </li>
-          <li class="ambassadors-item">
+          </div>
+          <div class="ambassadors-item">
             <div class="ambassadors-imageWrap">
               <img
                 class="ambassadors-image"
@@ -1012,8 +1011,8 @@
                 </li>
               </ul>
             </div>
-          </li>
-          <li class="ambassadors-item">
+          </div>
+          <div class="ambassadors-item">
             <div class="ambassadors-imageWrap">
               <img
                 class="ambassadors-image"
@@ -1059,40 +1058,11 @@
                 </li>
               </ul>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
 
-        <ul class="ambassadorsSlider-tabsList">
-          <li class="ambassadorsSlider-tabsItems">
-            <div class="ambassadorsSlider-tabsButtons active"></div>
-          </li>
-          <li class="ambassadorsSlider-tabsItems">
-            <div class="ambassadorsSlider-tabsButtons"></div>
-          </li>
-          <li class="ambassadorsSlider-tabsItems">
-            <div class="ambassadorsSlider-tabsButtons"></div>
-          </li>
-          <li class="ambassadorsSlider-tabsItems">
-            <div class="ambassadorsSlider-tabsButtons"></div>
-          </li>
-        </ul>
-
-        <ul class="ambassadorsSlider-navButtonsList">
-          <li class="ambassadorsSlider-navButtonsItem">
-            <button class="ambassadorsSlider-navButton" type="button">
-              <img src="./images/icons/slider-arrow.svg" alt="slider arrow" />
-            </button>
-          </li>
-          <li class="ambassadorsSlider-navButtonsItem">
-            <button class="ambassadorsSlider-navButton" type="button">
-              <img
-                class="ambassadorsSlider-navArrow-up"
-                src="./images/icons/slider-arrow.svg"
-                alt="slider arrow"
-              />
-            </button>
-          </li>
-        </ul>
+        <div class="ambassadorsSlider-dotsContainer"></div>
+        <div class="ambassadorsSlider-buttonsContainer"></div>
       </div>
     </section>
 
@@ -1470,6 +1440,17 @@
       </div>
     </footer>
 
+    <!-- scripts -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="./index.js"></script>
   </body>
 </html>
