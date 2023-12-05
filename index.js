@@ -117,7 +117,11 @@ function onPatientRegistrationFormSubmit(event) {
 }
 
 // sliders
-slidersConfig();
+const aboutSection = document.getElementById("about");
+
+if (aboutSection) {
+  slidersConfig();
+}
 
 function slidersConfig() {
   $(".slider-news-js").on("init", function (event, slick) {
@@ -223,7 +227,7 @@ function slidersConfig() {
   $(".slider-news-js").slick({
     dots: true,
     arrows: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     appendArrows: $(".newsSlider-buttonsContainer"),
     appendDots: $(".newsSlider-dotsContainer"),
@@ -244,7 +248,7 @@ function slidersConfig() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           infinite: true,
           arrows: true,
           dots: true,
@@ -263,44 +267,38 @@ function slidersConfig() {
     ],
   });
 
+  $(".slider-stories-for-js").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: ".slider-stories-js",
+  });
+
   $(".slider-stories-js").slick({
+    focusOnSelect: true,
     dots: true,
     arrows: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     appendArrows: $(".storiesSlider-buttonsContainer"),
     appendDots: $(".storiesSlider-dotsContainer"),
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    asNavFor: ".slider-stories-for-js",
     responsive: [
       {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          arrows: true,
-          dots: true,
-        },
-      },
-      {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          arrows: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           arrows: true,
           dots: true,
+          vertical: false,
+          verticalSwiping: false,
         },
       },
     ],
@@ -309,7 +307,7 @@ function slidersConfig() {
   $(".slider-team-js").slick({
     dots: true,
     arrows: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     appendArrows: $(".teamSlider-buttonsContainer"),
     appendDots: $(".teamSlider-dotsContainer"),
@@ -330,7 +328,7 @@ function slidersConfig() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           infinite: true,
           arrows: true,
           dots: true,
@@ -352,7 +350,7 @@ function slidersConfig() {
   $(".slider-ambassadors-js").slick({
     dots: true,
     arrows: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     appendArrows: $(".ambassadorsSlider-buttonsContainer"),
     appendDots: $(".ambassadorsSlider-dotsContainer"),
@@ -373,7 +371,7 @@ function slidersConfig() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           infinite: true,
           arrows: true,
           dots: true,
