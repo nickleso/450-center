@@ -157,7 +157,7 @@ textarea {
   position: relative;
   padding-top: 120px;
   padding-bottom: 128px;
-  background-image: url("./images/backgrounds/mob.jpg");
+  background-image: url("./images/backgrounds/hero-bcg-mob.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -165,7 +165,7 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url("./images/backgrounds/desc.jpg");
+    background-image: url("./images/backgrounds/hero-bcg-desc.jpg");
   }
 }
 
@@ -2658,6 +2658,11 @@ input[type="checkbox"]:focus {
 }
 
 /* news page */
+.news-page {
+  padding-top: 116px;
+  padding-bottom: 60px;
+}
+
 .news-pageWrap {
   padding: 50px 0;
   display: flex;
@@ -2665,10 +2670,32 @@ input[type="checkbox"]:focus {
   gap: 50px;
 }
 
+.storiesBigItem-subDescriptionWrapNews {
+  margin-top: 16px;
+}
+
 /* stories page */
+.stories-page {
+  padding-top: 116px;
+  padding-bottom: 60px;
+}
+
 .stories-pageWrap {
   padding: 50px 0;
   display: flex;
   flex-direction: column;
   gap: 50px;
+}
+
+.storiesPage-item {
+  padding: 16px;
+
+  border-top: 2px solid #c8dad1;
+  border-bottom: 2px solid #c8dad1;
+  background: linear-gradient(
+      0deg,
+      rgba(232, 241, 242, 0.5) 0%,
+      rgba(232, 241, 242, 0.5) 100%
+    ),
+    #fff;
 }
