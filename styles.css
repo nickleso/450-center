@@ -1442,22 +1442,32 @@ textarea {
   height: 270px;
 }
 
+.team-imageWrap {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  height: 250px;
+}
+
 @media screen and (max-width: 767.99px) {
   .team-imageWrap {
-    height: 341px;
+    height: 250px;
   }
 }
 
 .ambassadors-image {
   object-fit: cover;
+  object-position: center 35%;
   height: 100%;
 }
 
 .ambassadorsData-wrap {
+  height: 140px;
   padding-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
 
   border-top: 2px solid #c8dad1;
@@ -1465,6 +1475,7 @@ textarea {
 
 .teamData-wrap {
   align-items: flex-start;
+  justify-content: flex-start;
   height: 250px;
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
