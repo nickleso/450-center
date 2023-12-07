@@ -364,6 +364,7 @@ textarea {
 
 /* burger menu */
 .burger-menu {
+  z-index: 100;
   transform: translateX(-110%);
   padding: 16px;
   position: absolute;
@@ -382,7 +383,6 @@ textarea {
 }
 
 .burger-list {
-  margin-left: 60vw;
   display: flex;
   flex-direction: column;
   gap: 4px;
