@@ -322,7 +322,7 @@ textarea {
 
 .headerDesc-navList {
   display: flex;
-  gap: 16px;
+  gap: 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -366,7 +366,7 @@ textarea {
 .burger-menu {
   z-index: 100;
   transform: translateX(-110%);
-  padding: 16px;
+  padding: 16px 0;
   position: absolute;
   top: 50px;
   left: 0;
@@ -399,6 +399,35 @@ textarea {
 }
 
 .burgerLang-list {
+  margin-top: 4px;
+  padding: 10px 0;
+}
+
+.burgerLang-button {
+  padding: 6px;
+  color: inherit;
+  border-radius: 8px;
+  background-color: transparent;
+  font-weight: 400;
+}
+
+.burgerLang-buttonDesc {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .burgerLang-buttonDesc {
+    display: block;
+    padding: 6px;
+    color: inherit;
+    border-radius: 8px;
+    font-weight: 400;
+  }
+}
+
+.burgerLang-button.current_lang {
+  background-color: #c8dad1;
+  font-weight: 600;
 }
 
 /* presentation */
@@ -867,8 +896,7 @@ textarea {
 
 @media screen and (min-width: 1024px) {
   .storiesItem-descriptionWrap {
-    gap: 0;
-    justify-content: space-between;
+    gap: 6px;
   }
 }
 
@@ -2713,4 +2741,9 @@ input[type="checkbox"]:focus {
       rgba(232, 241, 242, 0.5) 100%
     ),
     #fff;
+}
+
+.storiesPage-subDescriptionWrap {
+  display: flex;
+  gap: 8px;
 }

@@ -1,5 +1,3 @@
-console.log("hi from js");
-
 // feedback form submit
 const feedbackForm = document.getElementById("feedback-form");
 
@@ -115,6 +113,36 @@ function onPatientRegistrationFormSubmit(event) {
 
   console.log("patient:", patient);
 }
+
+// lang switcher
+const ukrainian = document.getElementById("lang-ua");
+const english = document.getElementById("lang-en");
+
+english.addEventListener("click", function () {
+  changeLanguage(english, ukrainian);
+});
+
+ukrainian.addEventListener("click", function () {
+  changeLanguage(ukrainian, english);
+});
+
+function changeLanguage(lang_on, lang_off) {
+  if (!lang_on.classList.contains("current_lang")) {
+    lang_on.classList.add("current_lang");
+    lang_off.classList.remove("current_lang");
+  }
+}
+
+// lang switcher desc
+const langSingle = document.getElementById("lang-single");
+
+langSingle.addEventListener("click", function () {
+  if (langSingle.textContent.includes("UA")) {
+    langSingle.textContent = "EN";
+  } else if (langSingle.textContent.includes("EN")) {
+    langSingle.textContent = "UA";
+  }
+});
 
 // sliders
 const aboutSection = document.getElementById("about");
