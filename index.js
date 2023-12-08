@@ -233,6 +233,8 @@ function slidersConfig() {
     appendDots: $(".newsSlider-dotsContainer"),
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 15000,
     responsive: [
       {
         breakpoint: 1280,
@@ -268,6 +270,8 @@ function slidersConfig() {
   });
 
   $(".slider-stories-for-js").slick({
+    autoplay: true,
+    autoplaySpeed: 15000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -276,6 +280,8 @@ function slidersConfig() {
   });
 
   $(".slider-stories-js").slick({
+    autoplay: true,
+    autoplaySpeed: 15000,
     focusOnSelect: true,
     dots: true,
     arrows: true,
@@ -305,6 +311,8 @@ function slidersConfig() {
   });
 
   $(".slider-team-js").slick({
+    autoplay: true,
+    autoplaySpeed: 15000,
     dots: true,
     arrows: true,
     infinite: true,
@@ -348,6 +356,8 @@ function slidersConfig() {
   });
 
   $(".slider-ambassadors-js").slick({
+    autoplay: true,
+    autoplaySpeed: 15000,
     dots: true,
     arrows: true,
     infinite: true,
