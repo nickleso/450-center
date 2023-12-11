@@ -428,3 +428,41 @@ function slidersConfig() {
     ],
   });
 }
+
+// donation page
+// donation value toggle
+const donationValueButtons = document.querySelectorAll(
+  ".donationValues-button"
+);
+const donationValuesSubmit = document.querySelector(".donationValues-submit");
+
+let donationValue = 0;
+
+donationValueButtons.forEach((button) => {
+  button.addEventListener("click", onDonationValueChange);
+
+  function onDonationValueChange() {
+    donationValueButtons.forEach((button) => {
+      button.classList.remove("active");
+    });
+
+    // if (button.textContent.includes("Інша сума")) {
+    //   button.textContent = 1000;
+    // }
+
+    donationValue = button.textContent.trim();
+    button.classList.toggle("active");
+    console.log("donationValue:", donationValue);
+  }
+});
+
+donationValuesSubmit.addEventListener("click", onDonutionSubmit);
+
+function onDonutionSubmit() {
+  donationValueButtons.forEach((button) => {
+    if (!button.className.includes("active")) return;
+
+    console.log(button.textContent.trim());
+    console.log("submit");
+  });
+}
